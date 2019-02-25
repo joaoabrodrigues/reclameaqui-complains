@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/joaoabrodrigues/reclameaqui-complains/branch/master/graph/badge.svg?token=O18oyaRiif)](https://codecov.io/gh/joaoabrodrigues/reclameaqui-complains)
+
 # Backend Engineer Challenge #
 
 

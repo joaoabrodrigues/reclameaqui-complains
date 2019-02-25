@@ -1,13 +1,13 @@
-package br.com.reclameaqui.complains;
+package br.com.reclameaqui.complaints;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ComplainsApplication {
+public class ComplaintsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ComplainsApplication.class, args);
+		SpringApplication.run(ComplaintsApplication.class, args);
 	}
 
 }
