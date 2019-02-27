@@ -11,6 +11,7 @@ public class ComplaintsApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		// Test if context loads
 	}
 
 }
