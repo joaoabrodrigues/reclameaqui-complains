@@ -1,11 +1,14 @@
 package br.com.reclameaqui.complaints.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 @Data
+@Builder
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor
 public class Locale implements Serializable {
 
     private static final long serialVersionUID = 5989051926319604291L;

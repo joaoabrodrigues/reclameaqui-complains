@@ -1,12 +1,15 @@
 package br.com.reclameaqui.complaints.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 @Data
-class Company implements Serializable {
+@Builder
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor
+public class Company implements Serializable {
 
     private static final long serialVersionUID = -2725338351193263653L;
 

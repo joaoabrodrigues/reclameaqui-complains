@@ -11,6 +11,8 @@ import org.springframework.data.rest.core.annotation.HandleBeforeCreate;
 import org.springframework.data.rest.core.annotation.RepositoryEventHandler;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Component
 @RepositoryEventHandler(Complaint.class)
 public class ComplaintRepositoryHandler {
@@ -27,10 +29,10 @@ public class ComplaintRepositoryHandler {
         Locale locale = complaint.getLocale();
         JOpenCageForwardRequest request = new JOpenCageForwardRequest(locale.getAddress(), locale.getZipCode(), locale.getCity(), locale.getState(), locale.getCountry());
         JOpenCageResponse response = jOpenCageGeocoder.forward(request);
-        response.getResults().stream().findFirst().ifPresent(result -> {
+        Optional.ofNullable(response).ifPresent(res -> Optional.ofNullable(res.getResults()).ifPresent(results -> results.stream().findFirst().ifPresent(result -> {
             JOpenCageLatLng geometry = result.getGeometry();
             complaint.setLat(geometry.getLat().toString());
             complaint.setLng(geometry.getLng().toString());
-        });
+        })));
     }
 }

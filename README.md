@@ -5,6 +5,8 @@
 
 ### Solution ###
 
+I tried to keep this solution as simple as possible
+
  - Prerequisites:
     - Java 8
     - Maven 3.5.2
@@ -17,8 +19,9 @@
     - Update: PUT /api/complaint/{id}
     - Delete: DELETE /api/complaint/{id}
     - Find complaints by city and company: GET /api/complaint/search/company-city?city={city}&companyName={companyName}
-    - Find complaints by city: GET /api/complaint/search/company?companyName={companyName}
-    - Find complaints by company: GET /api/complaint/search/city?city={city}
+    - Find complaints by state and company: GET /api/complaint/search/company-state?state={state}&companyName={companyName}
+    - Find complaints by company: GET /api/complaint/search/company?companyName={companyName}
+    - Find complaints by city: GET /api/complaint/search/city?city={city}
 
  - Stack
     - Java 8
@@ -32,7 +35,6 @@
     - Docker
     
  - Implemented Tests:
-    - Unit
     - Integration
 
 To run:
